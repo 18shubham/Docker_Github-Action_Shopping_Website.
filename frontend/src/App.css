@@ -1,0 +1,86 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, sans-serif; background: #f5f5f5; }
+
+.navbar {
+  background: #1a1a2e; color: white; padding: 16px 24px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.brand { font-size: 1.4rem; font-weight: 700; cursor: pointer; }
+.nav-links { display: flex; gap: 20px; }
+.nav-links span { cursor: pointer; color: #ccc; }
+.nav-links span:hover { color: white; }
+
+.page { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+
+.search-bar { display: flex; gap: 12px; margin-bottom: 24px; }
+.search-bar input, .search-bar select {
+  padding: 10px 14px; border: 1px solid #ddd; border-radius: 8px;
+  font-size: 1rem; flex: 1;
+}
+
+.products-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+.product-card {
+  background: white; border-radius: 12px; padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.product-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; }
+.no-image { height: 180px; background: #eee; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999; margin-bottom: 12px; }
+.product-card h3 { font-size: 1rem; margin-bottom: 4px; }
+.category { color: #888; font-size: 0.8rem; margin-bottom: 8px; }
+.description { font-size: 0.85rem; color: #555; margin-bottom: 12px; }
+.product-footer { display: flex; justify-content: space-between; margin-bottom: 12px; }
+.price { font-weight: 700; color: #4361ee; font-size: 1.1rem; }
+.stock { color: #888; font-size: 0.85rem; }
+.btn-cart {
+  width: 100%; padding: 10px; background: #4361ee; color: white;
+  border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem;
+}
+.btn-cart:disabled { background: #ccc; cursor: not-allowed; }
+
+.auth-form {
+  max-width: 400px; margin: 60px auto; background: white;
+  padding: 32px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+.auth-form h2 { margin-bottom: 20px; }
+.auth-form input {
+  width: 100%; padding: 12px; margin-bottom: 12px;
+  border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;
+}
+.auth-form button {
+  width: 100%; padding: 12px; background: #4361ee; color: white;
+  border: none; border-radius: 8px; font-size: 1rem; cursor: pointer;
+}
+.link { color: #4361ee; cursor: pointer; }
+
+.cart-item {
+  background: white; padding: 16px; border-radius: 8px;
+  display: flex; gap: 16px; align-items: center; margin-bottom: 8px;
+}
+.cart-item button { margin-left: auto; padding: 6px 12px; background: #ff4757; color: white; border: none; border-radius: 6px; cursor: pointer; }
+.cart-total { background: white; padding: 20px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; margin-top: 16px; }
+.btn-order { padding: 12px 24px; background: #2ed573; color: white; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; }
+
+.order-card { background: white; padding: 16px; border-radius: 8px; margin-bottom: 8px; display: flex; gap: 16px; align-items: center; }
+.status { padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; background: #eee; }
+.status.delivered { background: #d4edda; color: #155724; }
+.status.pending { background: #fff3cd; color: #856404; }
+.status.cancelled { background: #f8d7da; color: #721c24; }
+
+.admin .tabs { display: flex; gap: 8px; margin-bottom: 24px; }
+.admin .tabs button { padding: 8px 20px; border: 1px solid #ddd; background: white; border-radius: 8px; cursor: pointer; }
+.admin .tabs button.active { background: #4361ee; color: white; border-color: #4361ee; }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.stat-card { background: white; padding: 24px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.stat-card h3 { color: #888; font-size: 0.9rem; margin-bottom: 8px; }
+.stat-card p { font-size: 2rem; font-weight: 700; color: #4361ee; }
+
+.product-form { background: white; padding: 24px; border-radius: 12px; margin-bottom: 24px; }
+.product-form input { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 8px; }
+.product-form button { padding: 10px 20px; background: #4361ee; color: white; border: none; border-radius: 8px; cursor: pointer; }
+
+.error { background: #fee; color: #c00; padding: 10px; border-radius: 8px; margin-bottom: 12px; }
+.empty { text-align: center; color: #888; padding: 40px; }

@@ -1,0 +1,19 @@
+# Never copy these into the Docker image
+
+node_modules
+# Why: Docker installs fresh dependencies inside the container.
+# Copying node_modules from host wastes space and can cause
+# platform conflicts (Mac vs Linux binaries are different)
+
+.env
+# Why: .env contains passwords and secrets. Never bake
+# secrets into an image — they become visible to anyone
+# who pulls the image from Docker Hub
+
+npm-debug.log
+# Why: Debug logs are useless inside a container
+# and just add unnecessary size
+
+.git
+# Why: Git history has no place in a production image
+# Can also expose sensitive commit history

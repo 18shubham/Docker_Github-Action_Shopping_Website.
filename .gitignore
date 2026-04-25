@@ -1,0 +1,11 @@
+# Never commit secrets to git
+.env
+
+# Never commit node_modules — installed fresh by Docker
+node_modules/
+
+# Never commit build output — built fresh by Docker
+dist/
+
+# OS files
+.DS_Store

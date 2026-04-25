@@ -1,0 +1,13 @@
+node_modules
+# Why: Installed fresh inside container
+# Host node_modules can have platform-specific binaries
+
+dist
+# Why: We build fresh inside Docker
+# Old dist folder from host should never be copied in
+
+.env
+# Why: Secrets never go into images
+
+.git
+# Why: Git history not needed in production image
